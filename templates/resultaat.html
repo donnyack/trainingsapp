@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Resultaten - {{ naam }}</title></head>
+<body>
+  <h1>Resultaten voor {{ naam }} op {{ datum }}</h1>
+  <table border="1" cellpadding="5">
+    <tr><th>Oefening</th><th>Set</th><th>Herhalingen</th><th>Gewicht</th></tr>
+    {% for r in sessie %}
+      <tr>
+        <td>{{ r.Oefening }}</td>
+        <td>{{ r.Set }}</td>
+        <td>{{ r.Herhalingen }}</td>
+        <td>{{ r.Gewicht }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <a href="/">Nieuwe workout starten</a>
+</body>
+</html>
